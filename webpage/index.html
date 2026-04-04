@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Crypto Market Drivers: Global Events vs. Whale Wallets</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header>
+  <div class="badge">Research Project</div>
+  <h1>Global Events vs. Whale Wallets</h1>
+  <p>An exploratory data analysis examining whether macro-level global events or the coordinated activity of large cryptocurrency holders ("whales") more strongly drives price volatility and market behavior.</p>
+  <div class="rq-box">
+    <span>Research Question:</span> What impacts the crypto market more — global events or whale wallets?
+  </div>
+</header>
+
+<nav>
+  <a href="index.html" class="active">🏠 Home</a>
+  <a href="viz1.html">🗺️ Event Heatmap</a>
+  <a href="viz2.html">📈 ETH & Whales</a>
+  <a href="viz3.html">🔢 Correlation</a>
+  <a href="viz4.html">🌊 Net Volume</a>
+  <a href="viz5.html">🌍 Crypto Dependence</a>
+</nav>
+
+<main>
+
+  <!-- INTRO -->
+  <section id="intro">
+    <div class="prose-card">
+      <h2>📋 Project Introduction</h2>
+      <p>Cryptocurrency markets are uniquely volatile, shaped by forces that range from geopolitical shocks and macroeconomic policy to the strategic movements of a small number of extremely large holders. This project investigates which category of influence — broad global events or concentrated whale wallet activity — has a more measurable and consistent impact on crypto market behavior.</p>
+      <p>To explore this question, we collected historical price data, on-chain transaction records, and timestamped global event data spanning [DATE RANGE]. We define "global events" as major economic, political, or public-health events with documented market-wide effects, and "whale wallets" as blockchain addresses holding more than [X] BTC/ETH. The five visualizations below each illuminate a different facet of this relationship, culminating in a comparative impact analysis.</p>
+    </div>
+  </section>
+
+  <!-- DATA -->
+  <section id="data">
+    <div class="prose-card">
+      <h2>🗄️ Data Description</h2>
+      <p>The dataset used in this project combines three primary sources. First, historical OHLCV (Open, High, Low, Close, Volume) price data for Bitcoin (BTC) and Ethereum (ETH) was sourced from the <strong>CoinGecko API</strong>, covering [DATE RANGE] at daily granularity — approximately [N] rows and [M] attributes including price, volume, and market cap.</p>
+      <p>Second, on-chain whale transaction data was obtained from <strong>Etherscan / Whale Alert API</strong>, capturing wallet addresses with holdings above a defined threshold, timestamped transaction events, and transaction value in USD. This dataset contains approximately [N] records across [M] attributes.</p>
+      <p>Third, a manually curated event log of [N] major global events (e.g., COVID-19 declaration, Fed rate announcements, exchange collapses, regulatory rulings) was assembled from news archives and annotated with date and estimated market sentiment. All three datasets were joined on date for the comparative analyses below.</p>
+    </div>
+  </section>
+
+  <!-- VIZ CARDS GRID -->
+  <section id="visualizations">
+    <div class="sec-head">
+      <div class="sec-icon si-gold">📊</div>
+      <h2>Visualizations</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="viz-grid">
+
+      <a href="viz1.html" class="viz-card">
+        <div class="viz-card-top">
+          <span class="tag tg">Global Events</span>
+          <div class="viz-num">01</div>
+        </div>
+        <h3>Geographic Heatmap of Global Events and BTC Price Impact</h3>
+        <p>Regions colored by magnitude of BTC price change following major events originating there.</p>
+        <div class="viz-card-footer">View Visualization →</div>
+      </a>
+
+      <a href="viz2.html" class="viz-card">
+        <div class="viz-card-top">
+          <span class="tag tp">Both</span>
+          <div class="viz-num">02</div>
+        </div>
+        <h3>Ethereum Price with Whale Transactions and Global Event Markers</h3>
+        <p>ETH price line overlaid with whale transaction points and red global event markers.</p>
+        <div class="viz-card-footer">View Visualization →</div>
+      </a>
+
+      <a href="viz3.html" class="viz-card">
+        <div class="viz-card-top">
+          <span class="tag tp">Comparative</span>
+          <div class="viz-num">03</div>
+        </div>
+        <h3>Price Impact Correlation: Top 5 Events vs. Top 5 Whale Days</h3>
+        <p>Side-by-side correlation values comparing the biggest global events against the biggest whale transaction days.</p>
+        <div class="viz-card-footer">View Visualization →</div>
+      </a>
+
+      <a href="viz4.html" class="viz-card">
+        <div class="viz-card-top">
+          <span class="tag tp">Both</span>
+          <div class="viz-num">04</div>
+        </div>
+        <h3>Net Whale Transaction Volume with Global Event Overlays</h3>
+        <p>Net whale buy/sell volume over time with global events marked, revealing behavioral shifts around major news.</p>
+        <div class="viz-card-footer">View Visualization →</div>
+      </a>
+
+      <a href="viz5.html" class="viz-card">
+        <div class="viz-card-top">
+          <span class="tag tw">Global Context</span>
+          <div class="viz-num">05</div>
+        </div>
+        <h3>Global Map of Cryptocurrency Dependence by Country</h3>
+        <p>Countries shaded by crypto adoption and economic dependence, contextualizing which regions drive market reactions.</p>
+        <div class="viz-card-footer">View Visualization →</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- SUMMARY -->
+  <section id="summary">
+    <div class="summary-card">
+      <h2>📝 Summary & Findings</h2>
+      <p>Replace this paragraph with your overall findings. Describe what the five visualizations collectively revealed about the relative influence of global events versus whale wallet activity on the cryptocurrency market. Discuss which factor appeared more dominant, under what conditions, and whether the two forces interact or are independent.</p>
+      <p>Replace this paragraph with future directions. For example: "Future work could incorporate higher-frequency data to better capture the lag between whale transactions and price movement. Expanding the analysis to include altcoins beyond BTC and ETH, or applying machine learning to formally quantify feature importance, would strengthen these findings."</p>
+      <div class="verdict-pills">
+        <div class="vp vp-g">🌍 Global Events</div>
+        <div class="vp vp-w">🐋 Whale Wallets</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERENCES -->
+  <section id="refs">
+    <div class="prose-card">
+      <h2>📚 References</h2>
+      <ul class="refs">
+        <li><a href="https://www.coingecko.com/en/api" target="_blank">CoinGecko API — Historical cryptocurrency price and market data</a></li>
+        <li><a href="https://etherscan.io/apis" target="_blank">Etherscan API — Ethereum on-chain transaction and wallet data</a></li>
+        <li><a href="https://whale-alert.io/" target="_blank">Whale Alert — Real-time large cryptocurrency transaction tracking</a></li>
+        <li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3639431" target="_blank">Ante, L. (2023) — How Elon Musk's Twitter Activity Moves Cryptocurrency Markets (SSRN)</a></li>
+        <li><a href="https://www.bis.org/publ/work1049.htm" target="_blank">BIS Working Paper — Crypto shocks and retail losses (Bank for International Settlements)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  DS Research Project · Crypto Market Analysis · Visualizations built with Altair &amp; D3.js
+</footer>
+
+</body>
+</html>
