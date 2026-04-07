@@ -15,12 +15,12 @@
 </header>
 
 <nav>
-  <a href="index.html">🏠 Home</a>
-  <a href="viz1.html" class="active">🗺️ Event Heatmap</a>
-  <a href="viz2.html">📈 ETH & Whales</a>
-  <a href="viz3.html">🔢 Correlation</a>
-  <a href="viz4.html">🌊 Net Volume</a>
-  <a href="viz5.html">🌍 Crypto Dependence</a>
+  <a href="index.html">Home</a>
+  <a href="viz1.html" class="active">Whale Signals & Global Events</a>
+  <a href="viz2.html">Whale Net Flow</a>
+  <a href="viz3.html">Return Calendar</a>
+  <a href="viz4.html">Correlation</a>
+  <a href="viz5.html">Event Heatmap</a>
 </nav>
 
 <main>
@@ -28,24 +28,28 @@
   <section>
     <div class="sec-head">
       <div class="sec-icon si-gold">🗺️</div>
-      <h2>Visualization 1 <span class="num">— Global Event Heatmap</span></h2>
+      <h2>Visualization 1 <span class="num">— Whale Signals & Global Events</span></h2>
       <div class="sec-line"></div>
     </div>
     <div class="chart-card">
       <div class="chart-header">
         <div>
-          <h3>Geographic Heatmap of Global Events and BTC Price Impact</h3>
-          <div class="sub">Each region on the map is colored by the magnitude of BTC price change following major events originating there. Darker regions indicate stronger market reactions, revealing which parts of the world exert the most influence on Bitcoin.</div>
+          <h3>Whale Signals and Global Events Overlaid on BTC and ETH Prices over time</h3>
+          <div class="sub">ETH and BTC price movement from March 2025 to early 2026, overlaid with whale transaction signals and color-coded global event markers by category.</div>
         </div>
         <span class="tag tg">Global Events</span>
       </div>
       <div class="chart-body">
-        <iframe src="charts/viz1.html" width="100%" height="500" frameborder="0"></iframe>
+        <iframe src="viz/chart1_price_whale_events.html" width="100%" height="500" frameborder="0"></iframe>
       </div>
       <div class="interact-hint">Interaction: Hover over a region to see the specific events and their associated BTC price impact.</div>
       <div class="takeaway">
         <strong>Takeaway</strong>
-        <p>Replace this with your key finding. For example: "Events originating in the United States and China produced the largest average BTC price swings, reflecting the outsized influence of regulatory actions and macroeconomic policy from these two markets."</p>
+        <p>Etherium prices went up from about $1,500 in May 2025 to a peak of about $4,500 in September 2025. This rise was accompanied by a lot of whale buying activity, which suggests that big holders had a big part in driving the uptrend. But the long-term drop that came after that tells a more complicated story. Whale sell signals showed up at the top, but global events like the Trade War Escalation in March 2026 happened at the chart's lowest prices, and the repeated "Fed Holds Rates" announcements didn't get a consistent reaction throughout. The most telling thing is that whale buying kept going even as prices fell through early 2026, which didn't stop the overall downtrend. This means that when the macro sentiment turns bearish, even coordinated buying by big holders can't stop the market from being affected by global events."</p>
+      </div>
+      <div class="design-choices">
+        <strong>Design Choices</strong>
+        <p>This visualization uses a dark background to make the overlaid data elements stand out without getting in each other's way. The price of Etherium is a continuous blue line that shows movement over time. Bitcoin is a dotted orange line that shows the market context. Whale activity is shown as triangles that point up and down, with teal for buys and red for sells. These shapes make sense when you think about how the market moves. Vertical dashed lines, color-coded by category, show global events. They show moments in time without getting in the way of the price data below."</p>
       </div>
     </div>
   </section>

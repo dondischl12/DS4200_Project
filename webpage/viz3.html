@@ -15,12 +15,12 @@
 </header>
 
 <nav>
-  <a href="index.html">🏠 Home</a>
-  <a href="viz1.html">🗺️ Event Heatmap</a>
-  <a href="viz2.html">📈 ETH & Whales</a>
-  <a href="viz3.html" class="active">🔢 Correlation</a>
-  <a href="viz4.html">🌊 Net Volume</a>
-  <a href="viz5.html">🌍 Crypto Dependence</a>
+  <a href="index.html">Home</a>
+  <a href="viz1.html">Whale Signals & Global Events</a>
+  <a href="viz2.html">Whale Net Flow</a>
+  <a href="viz3.html" class="active">Return Calendar</a>
+  <a href="viz4.html">Correlation</a>
+  <a href="viz5.html">Event Heatmap</a>
 </nav>
 
 <main>
@@ -28,24 +28,28 @@
   <section>
     <div class="sec-head">
       <div class="sec-icon si-gold">🔢</div>
-      <h2>Visualization 3 <span class="num">— Correlation: Top Events vs. Top Whale Days</span></h2>
+      <h2>Visualization 3 <span class="num">— Return Calendar</span></h2>
       <div class="sec-line"></div>
     </div>
     <div class="chart-card">
       <div class="chart-header">
         <div>
-          <h3>Price Impact Correlation: 5 Biggest Global Events vs. 5 Biggest Whale Transaction Days</h3>
-          <div class="sub">A side-by-side comparison of the five most impactful global events and the five largest whale transaction days, ranked by their correlation with BTC/ETH price movement. Directly quantifies and contrasts the market influence of each force.</div>
+          <h3>Bitcoin & Ethereum — Daily Return Calendar</h3>
+          <div class="sub">A calendar heatmap of daily BTC and ETH returns from February 2025 to March 2026, where cell color encodes return direction and magnitude (green = up, red = down). Colored dots mark global events by category and colored cell borders indicate whale signal days, allowing pattern recognition across time at a glance.</div>
         </div>
-        <span class="tag tp">Comparative</span>
+        <span class="tag tp">Both</span>
       </div>
       <div class="chart-body">
-        <iframe src="charts/viz3.html" width="100%" height="500" frameborder="0"></iframe>
+        <iframe src="viz/calendar_chart.html" width="100%" height="500" frameborder="0"></iframe>
       </div>
       <div class="interact-hint">Interaction: Hover over bars to see the exact correlation value, event or transaction date, and associated price change percentage.</div>
       <div class="takeaway">
         <strong>Takeaway</strong>
         <p>Replace this with your key finding. For example: "The top 5 global events produced higher average correlation values with price movement than the top 5 whale transaction days, though one whale transaction day ranked among the single most correlated individual observations in the entire dataset."</p>
+      </div>
+      <div class="design-choices">
+        <strong>Design Choices</strong>
+        <p>This visualization uses a dark background to make the overlaid data elements stand out without getting in each other's way. The price of Etherium is a continuous blue line that shows movement over time. Bitcoin is a dotted orange line that shows the market context. Whale activity is shown as triangles that point up and down, with teal for buys and red for sells. These shapes make sense when you think about how the market moves. Vertical dashed lines, color-coded by category, show global events. They show moments in time without getting in the way of the price data below."</p>
       </div>
     </div>
   </section>

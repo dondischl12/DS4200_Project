@@ -15,12 +15,12 @@
 </header>
 
 <nav>
-  <a href="index.html">🏠 Home</a>
-  <a href="viz1.html">🗺️ Event Heatmap</a>
-  <a href="viz2.html">📈 ETH & Whales</a>
-  <a href="viz3.html">🔢 Correlation</a>
-  <a href="viz4.html" class="active">🌊 Net Volume</a>
-  <a href="viz5.html">🌍 Crypto Dependence</a>
+  <a href="index.html">Home</a>
+  <a href="viz1.html">Whale Signals & Global Events</a>
+  <a href="viz2.html">Whale Net Flow</a>
+  <a href="viz3.html">Return Calendar</a>
+  <a href="viz4.html" class="active">Correlation</a>
+  <a href="viz5.html">Event Heatmap</a>
 </nav>
 
 <main>
@@ -28,24 +28,28 @@
   <section>
     <div class="sec-head">
       <div class="sec-icon si-purple">🌊</div>
-      <h2>Visualization 4 <span class="num">— Global Events on Net Whale Volume</span></h2>
+      <h2>Visualization 4 <span class="num">— Correlation</span></h2>
       <div class="sec-line"></div>
     </div>
     <div class="chart-card">
       <div class="chart-header">
         <div>
-          <h3>Net Whale Transaction Volume with Global Event Overlays</h3>
-          <div class="sub">Net whale transaction volume (buys minus sells) plotted over time, with global events overlaid as vertical markers. Positive net volume indicates whales were net buyers; negative indicates net sellers. Event markers reveal whether whale behavior shifts before or after major news.</div>
+          <h3>Top 5 Global Events vs. Top 5 Whale Activity Days</h3>
+          <div class="sub">A side-by-side comparison of the five most impactful global events by 3-day BTC price change against the five highest whale transaction volume days, with same-day BTC price change labeled on each bar. Pearson r = -0.031 indicates no meaningful linear correlation between whale transaction size and price movement.</div>
         </div>
-        <span class="tag tp">Both</span>
+        <span class="tag tp">Comparative</span>
       </div>
       <div class="chart-body">
-        <iframe src="charts/viz4.html" width="100%" height="500" frameborder="0"></iframe>
+        <iframe src="viz/chart2_top5_events_vs_whales.html" width="100%" height="500" frameborder="0"></iframe>
       </div>
       <div class="interact-hint">Interaction: Hover over event markers to see event details. Brush along the x-axis to zoom into a specific time window.</div>
       <div class="takeaway">
         <strong>Takeaway</strong>
-        <p>Replace this with your key finding. For example: "Whale net volume frequently shifted from positive to negative in the days immediately following major global events, suggesting large holders tend to sell into the volatility created by world news rather than anticipating it in advance."</p>
+        <p>The bar charts show the top 5 net changes of Bitcoin in a 3 day window after global events and whale wallet activity. The top 5 global events show an interesting split, geopolitical and macro events like the Tariff Pause and Tariff Deadline produced the strongest positive price reactions at +9.3% and +7.9% respectively, while the ETH ATH Retested and a Fed Hold in early 2026 both triggered notable drops, suggesting that by late 2025 the market was actually selling the news. The Pearson r of -0.031 on the whale activity chart indicates essentially no linear relationship between how large a whale transaction is and how the market moves that day, which directly challenges the assumption that bigger whale moves drive bigger price reactions. The largest average transaction day by far is November 2025 at nearly $700k average transaction value, yet it only produced a -1.6% price change, while November 2024 had a much smaller average transaction size but delivered +10.2%, further reinforcing that transaction size alone is a poor predictor of market impact."</p>
+      </div>
+      <div class="design-choices">
+        <strong>Design Choices</strong>
+        <p>Both charts share the same green/red color encoding for positive and negative outcomes, creating a visual language that carries across the two panels without needing separate legends. The horizontal bar format was chosen for both because the event and date labels are long strings that sit far more naturally along a y-axis than rotated beneath vertical bars. A key encoding decision was splitting the quantitative work across two channels in the whale chart. Bar length encodes average transaction value in USD, while the text labels carry the price change percentage, allowing two separate variables to coexist in the same bar without overlap. The zero-centered axis on the global events chart lets the viewer immediately read direction from position alone, with color then reinforcing the same information, while the whale chart intentionally starts at zero since transaction values are strictly positive and direction is communicated through the labeled percentage instead."</p>
       </div>
     </div>
   </section>
