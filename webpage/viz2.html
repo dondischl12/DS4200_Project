@@ -45,11 +45,11 @@
       <div class="interact-hint">Interaction: Hover over data points to see transaction size or event name. Toggle whale transactions and event markers on/off using the legend.</div>
       <div class="takeaway">
         <strong>Takeaway</strong>
-        <p>Replace this with your key finding. For example: "Whale transaction clusters and global event markers frequently appear in close proximity on the timeline, suggesting the two forces often coincide rather than act independently during periods of high ETH volatility."</p>
+        <p>A radar chart that lets users compare a few cities on all the important factors at once, making it easy to see the trade-offs. A weighted scatter plot with cost of living on the x-axis and walkability on the y-axis. The size of the points shows the average temperature, and the color shows a personalized match score that changes as users change how much weight they put on each factor. And a choropleth map to show how city scores are spread out across the country. I thought this could show regional patterns, like whether affordable, walkable cities tend to be in the same area of the country, that a table or scatter plot wouldn't show on its own.</p>
       </div>
       <div class="design-choices">
         <strong>Design Choices</strong>
-        <p>This visualization uses a dark background to make the overlaid data elements stand out without getting in each other's way. The price of Etherium is a continuous blue line that shows movement over time. Bitcoin is a dotted orange line that shows the market context. Whale activity is shown as triangles that point up and down, with teal for buys and red for sells. These shapes make sense when you think about how the market moves. Vertical dashed lines, color-coded by category, show global events. They show moments in time without getting in the way of the price data below."</p>
+        <p>A bar chart was chosen instead of a line plot because net flow is a daily value that doesn't change over time. Bars make it easier to read individual days and see at a glance which ones are positive and which ones are negative. The teal bars show net accumulation, and the pink bars show net distribution. This keeps with the color scheme used throughout the project. As with the other visualizations in this project, global events are shown as vertical dashed lines that are color-coded by category. This way, people who have seen the project before can quickly find their way around without having to read a legend again. To show that the data is on-chain and to avoid distortion from price changes, the y-axis is kept in raw ETH units instead of USD."</p>
       </div>
     </div>
   </section>

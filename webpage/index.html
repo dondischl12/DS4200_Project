@@ -41,9 +41,11 @@
   <section id="data">
     <div class="prose-card">
       <h2>🗄️ Data Description</h2>
-      <p>The dataset used in this project combines three primary sources. First, historical OHLCV (Open, High, Low, Close, Volume) price data for Bitcoin (BTC) and Ethereum (ETH) was sourced from the <strong>CoinGecko API</strong>, covering [DATE RANGE] at daily granularity — approximately [N] rows and [M] attributes including price, volume, and market cap.</p>
-      <p>Second, on-chain whale transaction data was obtained from <strong>Etherscan / Whale Alert API</strong>, capturing wallet addresses with holdings above a defined threshold, timestamped transaction events, and transaction value in USD. This dataset contains approximately [N] records across [M] attributes.</p>
-      <p>Third, a manually curated event log of [N] major global events (e.g., COVID-19 declaration, Fed rate announcements, exchange collapses, regulatory rulings) was assembled from news archives and annotated with date and estimated market sentiment. All three datasets were joined on date for the comparative analyses below.</p>
+      <p>We are collecting data through public APIs sourced via GitHub. These APIs provide comprehensive access to on-chain data:</p>
+      <p><a href="https://github.com/public-apis/public-apis?tab=readme-ov-file#cryptocurrency">GitHub Crypto APIs</a></p>
+      <p><a href="https://www.blockchain.com/explorer/api">Blockchain API</a></p>
+      <p><a href="https://etherscan.io/apis">Etherscan API</a></p>
+      <p>The dataset size is undetermined so far, but we expect to work with approximately 10,000 transactions. The dataset has tracked every single transaction in history, but we will limit the window to prevent incurring excessive API call costs.</p>
     </div>
   </section>
 
@@ -113,11 +115,10 @@
   <section id="summary">
     <div class="summary-card">
       <h2>📝 Summary & Findings</h2>
-      <p>Replace this paragraph with your overall findings. Describe what the five visualizations collectively revealed about the relative influence of global events versus whale wallet activity on the cryptocurrency market. Discuss which factor appeared more dominant, under what conditions, and whether the two forces interact or are independent.</p>
-      <p>Replace this paragraph with future directions. For example: "Future work could incorporate higher-frequency data to better capture the lag between whale transactions and price movement. Expanding the analysis to include altcoins beyond BTC and ETH, or applying machine learning to formally quantify feature importance, would strengthen these findings."</p>
+      <p>Across all five visualizations, a clear picture emerges. Global events and whale wallet activity are not separate forces competing for market influence; they interact, and the balance between them shifts based on market conditions. During the bull run from April to September 2025, whale accumulation was significant and moved in the same direction as price changes. This suggests that large holders actively supported the uptrend. However, the following bear market presented a different scenario. Whale buying continued into early 2026, but it could not stop the decline. Macro events, such as the Trade War Escalation and repeated Federal Reserve policy decisions, coincided with the sharpest price drops. The Top 5 comparison chart illustrates this imbalance clearly. Global events caused price swings of up to 9.3% within three days. In contrast, the Pearson r of -0.031 for whale transaction size indicates that raw transaction volume essentially has no predictive link to same-day price movement. The geographic bubble map further shows that market-moving events are mainly focused on the United States. These events are driven by regulatory decisions and Federal Reserve policy. Meanwhile, the daily return calendars demonstrate that neither whales nor events consistently predict direction on an individual day. Overall, the evidence suggests that global events create the macro conditions that ultimately guide market direction. Whale activity enhances movements within those conditions instead of initiating them independently. Future work could expand this analysis to higher-frequency intraday data to better capture the timing gap between whale transactions and price responses. It could also include a wider range of altcoins beyond BTC and ETH, and apply predictive modeling to quantify the relative impact of each factor on price changes across different market conditions.</p>
       <div class="verdict-pills">
-        <div class="vp vp-g">🌍 Global Events</div>
-        <div class="vp vp-w">🐋 Whale Wallets</div>
+        <div class="vp vp-g">Global Events Drive Direction</div>
+        <div class="vp vp-w">Whales Amplify Movement</div>
       </div>
     </div>
   </section>
