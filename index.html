@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Crypto Market Drivers: Global Events vs. Whale Wallets</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header>
+  <div class="badge">Research Project</div>
+  <h1>Global Events vs. Whale Wallets</h1>
+  <p>An exploratory data analysis examining whether macro-level global events or the coordinated activity of large cryptocurrency holders ("whales") more strongly drives price volatility and market behavior.</p>
+  <div class="rq-box">
+    <span>Research Question:</span> What impacts the crypto market more — global events or whale wallets?
+  </div>
+</header>
+
+<nav>
+  <a href="index.html" class="active">Home</a>
+  <a href="viz1.html">Whale Signals & Global Events</a>
+  <a href="viz2.html">Whale Net Flow</a>
+  <a href="viz3.html">Return Calendar</a>
+  <a href="viz4.html">Correlation</a>
+  <a href="viz5.html">Event Heatmap</a>
+</nav>
+
+<main>
+
+  <!-- INTRO -->
+  <section id="intro">
+    <div class="prose-card">
+      <h2>📋 Project Introduction</h2>
+      <p>Every year, it seems like investing in crypto is increasing exponentially, with Bitcoin reaching over $100,000 various different times at its peaks. Unlike traditional currencies, crypto is not controlled by a centralized government or backed by physical assets; instead, it is driven by a complex web of market forces. Our project focuses on the two potential major drivers of crypto prices, major global events and whale wallet activity. ‘Whale wallets’ are accounts that have large amounts of crypto that can potentially sway the market one way. Our analysis focuses on exploring the correlation strengths between the change in crypto prices on a given day and the potential drivers for that change through major global events or whale activity near that date. We aim to find out whether global events or whale wallet activities have a larger impact on crypto prices and potentially find out if any insider trading is present. Together, these layers paint a picture of a market shaped from major events and from above through rich investors. By visualizing both dimensions, we aim to tell a more complete story of what drives the crypto ecosystem than either perspective alone could offer.</p>
+    </div>
+  </section>
+
+  <!-- DATA -->
+  <section id="data">
+    <div class="prose-card">
+      <h2>🗄️ Data Description</h2>
+      <p>We are collecting data through public APIs sourced via GitHub. These APIs provide comprehensive access to on-chain data:</p>
+      <p><a href="https://github.com/public-apis/public-apis?tab=readme-ov-file#cryptocurrency">GitHub Crypto APIs</a></p>
+      <p><a href="https://www.blockchain.com/explorer/api">Blockchain API</a></p>
+      <p><a href="https://etherscan.io/apis">Etherscan API</a></p>
+      <p>The dataset size is undetermined so far, but we expect to work with approximately 10,000 transactions. The dataset has tracked every single transaction in history, but we will limit the window to prevent incurring excessive API call costs.</p>
+    </div>
+  </section>
+
+  <!-- VIZ CARDS GRID -->
+  <section id="visualizations">
+    <div class="sec-head">
+      <div class="sec-icon si-gold">📊</div>
+      <h2>Visualizations</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="viz-grid">
+
+      <a href="viz1.html" class="viz-card">
+        <div class="viz-card-top">
+          <span class="tag tg">Global Events</span>
+          <div class="viz-num">01</div>
+        </div>
+        <h3>Whale Signals and Global Events Overlaid on BTC and ETH Prices over time</h3>
+        <p>ETH and BTC price movement from March 2025 to early 2026, overlaid with whale transaction signals and color-coded global event markers by category.</p>
+        <div class="viz-card-footer">View Visualization →</div>
+      </a>
+
+      <a href="viz2.html" class="viz-card">
+        <div class="viz-card-top">
+          <span class="tag tp">Both</span>
+          <div class="viz-num">02</div>
+        </div>
+        <h3>Ethereum Price with Whale Transactions and Global Event Markers</h3>
+        <p>Net ETH moved by whale wallets each day from May 2025 to March 2026, with positive bars indicating net accumulation and negative bars indicating net distribution, overlaid with color-coded global event markers.</p>
+        <div class="viz-card-footer">View Visualization →</div>
+      </a>
+
+      <a href="viz3.html" class="viz-card">
+        <div class="viz-card-top">
+          <span class="tag tp">Both</span>
+          <div class="viz-num">03</div>
+        </div>
+        <h3>Bitcoin & Ethereum — Daily Return Calendar</h3>
+        <p>A calendar heatmap of daily BTC and ETH returns from February 2025 to March 2026, where cell color encodes return direction and magnitude (green = up, red = down). Colored dots mark global events by category and colored cell borders indicate whale signal days, allowing pattern recognition across time at a glance.</p>
+        <div class="viz-card-footer">View Visualization →</div>
+      </a>
+
+      <a href="viz4.html" class="viz-card">
+        <div class="viz-card-top">
+          <span class="tag tp">Comparative</span>
+          <div class="viz-num">04</div>
+        </div>
+        <h3>Top 5 Global Events vs. Top 5 Whale Activity Days</h3>
+        <p>A side-by-side comparison of the five most impactful global events by 3-day BTC price change against the five highest whale transaction volume days, with same-day BTC price change labeled on each bar. Pearson r = -0.031 indicates no meaningful linear correlation between whale transaction size and price movement.</p>
+        <div class="viz-card-footer">View Visualization →</div>
+      </a>
+
+      <a href="viz5.html" class="viz-card">
+        <div class="viz-card-top">
+          <span class="tag tw">Global Events</span>
+          <div class="viz-num">05</div>
+        </div>
+        <h3>Global Events & BTC 3-Day Price Impact</h3>
+        <p>A world map plotting major global events by geographic origin, where bubble size encodes the magnitude of BTC price change in the 3-day window following each event, fill color indicates price direction (teal = positive, red = negative), and border color identifies event type. The heavy concentration of bubbles over North America reflects the outsized influence of US-based regulatory and macroeconomic events on the Bitcoin market.</p>
+        <div class="viz-card-footer">View Visualization →</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- SUMMARY -->
+  <section id="summary">
+    <div class="summary-card">
+      <h2>📝 Summary & Findings</h2>
+      <p>Across all five visualizations, a clear picture emerges. Global events and whale wallet activity are not separate forces competing for market influence; they interact, and the balance between them shifts based on market conditions. During the bull run from April to September 2025, whale accumulation was significant and moved in the same direction as price changes. This suggests that large holders actively supported the uptrend. However, the following bear market presented a different scenario. Whale buying continued into early 2026, but it could not stop the decline. Macro events, such as the Trade War Escalation and repeated Federal Reserve policy decisions, coincided with the sharpest price drops. The Top 5 comparison chart illustrates this imbalance clearly. Global events caused price swings of up to 9.3% within three days. In contrast, the Pearson r of -0.031 for whale transaction size indicates that raw transaction volume essentially has no predictive link to same-day price movement. The geographic bubble map further shows that market-moving events are mainly focused on the United States. These events are driven by regulatory decisions and Federal Reserve policy. Meanwhile, the daily return calendars demonstrate that neither whales nor events consistently predict direction on an individual day. Overall, the evidence suggests that global events create the macro conditions that ultimately guide market direction. Whale activity enhances movements within those conditions instead of initiating them independently. Future work could expand this analysis to higher-frequency intraday data to better capture the timing gap between whale transactions and price responses. It could also include a wider range of altcoins beyond BTC and ETH, and apply predictive modeling to quantify the relative impact of each factor on price changes across different market conditions.</p>
+      <div class="verdict-pills">
+        <div class="vp vp-g">Global Events Drive Direction</div>
+        <div class="vp vp-w">Whales Amplify Movement</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERENCES -->
+  <section id="refs">
+    <div class="prose-card">
+      <h2>📚 References</h2>
+      <ul class="refs">
+        <li><a href="https://www.sciencedirect.com/science/article/pii/S154461232501164X?via%3Dihub" target="_blank">Effects of 'Whale Wallets' on BitCoin transactions</a></li>
+        <li><a href="https://www.sciencedirect.com/science/article/pii/S0040162522002657?via%3Dihub" target="_blank">The effect of a nation's development on cryptocurrency adoption</a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  DS Research Project · Crypto Market Analysis · Visualizations built with Altair &amp; D3.js
+</footer>
+
+</body>
+</html>

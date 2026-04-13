@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Viz 2 — ETH Price, Whale Transactions & Global Events</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header>
+  <div class="badge">Visualization 02</div>
+  <h1>Ethereum Price vs. Whale Activity</h1>
+  <p>A line plot tracking ETH price alongside whale wallet transactions, with major global events marked as annotations.</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="viz1.html">Whale Signals & Global Events</a>
+  <a href="viz2.html" class="active">Whale Net Flow</a>
+  <a href="viz3.html">Return Calendar</a>
+  <a href="viz4.html">Correlation</a>
+  <a href="viz5.html">Event Heatmap</a>
+</nav>
+
+<main>
+
+  <section>
+    <div class="sec-head">
+      <div class="sec-icon si-purple">📈</div>
+      <h2>Visualization 2 <span class="num">— Whale Net Flow</span></h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-header">
+        <div>
+          <h3>Ethereum Price with Whale Transactions and Global Event Markers</h3>
+          <div class="sub">Net ETH moved by whale wallets each day from May 2025 to March 2026, with positive bars indicating net accumulation and negative bars indicating net distribution, overlaid with color-coded global event markers.</div>
+        </div>
+        <span class="tag tp">Both</span>
+      </div>
+      <div class="chart-body">
+        <iframe src="viz/chart2_whale_flow.html" width="100%" height="500" frameborder="0"></iframe>
+      </div>
+      <div class="interact-hint">Interaction: Hover over data points to see transaction size or event name. Toggle whale transactions and event markers on/off using the legend.</div>
+      <div class="takeaway">
+        <strong>Takeaway</strong>
+        <p>A radar chart that lets users compare a few cities on all the important factors at once, making it easy to see the trade-offs. A weighted scatter plot with cost of living on the x-axis and walkability on the y-axis. The size of the points shows the average temperature, and the color shows a personalized match score that changes as users change how much weight they put on each factor. And a choropleth map to show how city scores are spread out across the country. I thought this could show regional patterns, like whether affordable, walkable cities tend to be in the same area of the country, that a table or scatter plot wouldn't show on its own.</p>
+      </div>
+      <div class="design-choices">
+        <strong>Design Choices</strong>
+        <p>A bar chart was chosen instead of a line plot because net flow is a daily value that doesn't change over time. Bars make it easier to read individual days and see at a glance which ones are positive and which ones are negative. The teal bars show net accumulation, and the pink bars show net distribution. This keeps with the color scheme used throughout the project. As with the other visualizations in this project, global events are shown as vertical dashed lines that are color-coded by category. This way, people who have seen the project before can quickly find their way around without having to read a legend again. To show that the data is on-chain and to avoid distortion from price changes, the y-axis is kept in raw ETH units instead of USD."</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="viz1.html">← Event Heatmap</a>
+    <a href="index.html" class="home-btn">🏠 Home</a>
+    <a href="viz3.html">Next: Correlation →</a>
+  </div>
+
+</main>
+
+<footer>
+  DS Research Project · Crypto Market Analysis · Visualizations built with Altair &amp; D3.js
+</footer>
+
+</body>
+</html>
